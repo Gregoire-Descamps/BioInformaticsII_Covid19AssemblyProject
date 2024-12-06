@@ -8,10 +8,10 @@ For the assembly, only the R1 fastq file should be used (not the R2)
 
  - Step 2: Construct the DBG by looking for perfect overlaps of k-1 length between the k-mers of the index you have constructed in step 1. For that, start by a random k-mer from your index and append it to the right and then to the left, using the k-1 overlap strategy. Be aware of using each k-mer once in your graph.
 
-    E.g.:
-        You start with "ATGGATTA"
-        You append it to the right
-
+E.g.:
+ - You start with "ATGGATTA"
+ - You append it to the right
+```
       ATGGATTA
        |||||||
        TGGATTAT
@@ -19,17 +19,17 @@ For the assembly, only the R1 fastq file should be used (not the R2)
         GGATTATC
          |||||||
          GATTATCG
-
-        Once there is no more possibility to append to the right, you append to the left
-
+```
+Once there is no more possibility to append to the right, you append to the left
+```
      TATGGATT
       |||||||
       ATGGATTA
        TGGATTAT
         GGATTATC
          GATTATCG
-
-    For each overlap check, do not forget to take into consideration the reverse complement of the k-mers.
+```
+For each overlap check, do not forget to take into consideration the reverse complement of the k-mers.
 
  - Step 3: Once there is no more possibility to append to both right and left, generate the consensus sequence from your overlapping k-mers as follows and save it as a contig in an output fasta file.
 
