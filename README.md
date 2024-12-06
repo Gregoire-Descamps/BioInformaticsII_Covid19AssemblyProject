@@ -32,7 +32,7 @@ Once there is no more possibility to append to the right, you append to the left
 For each overlap check, do not forget to take into consideration the reverse complement of the k-mers.
 
  - Step 3: Once there is no more possibility to append to both right and left, generate the consensus sequence from your overlapping k-mers as follows and save it as a contig in an output fasta file.
-
+```
      TATGGATT
       ATGGATTA
        TGGATTAT
@@ -40,6 +40,7 @@ For each overlap check, do not forget to take into consideration the reverse com
          GATTATCG
     ___________________
        TATGGATTATCG --> consensus sequence
+```
 
  - Repeat Step 2 and Step 3 until all the k-mers in your dictionary have been checked.
 
