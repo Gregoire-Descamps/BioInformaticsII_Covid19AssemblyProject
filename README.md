@@ -1,7 +1,7 @@
 This is a projec given in 1st year Data management in Biosiences, Bioinformatics course.
 
 
-##Instructions
+## Instructions
 For the assembly, only the R1 fastq file should be used (not the R2)
 
     Step 1: Indexing k-mers found in the reads of the R1 fastq file in a dictionary. The keys in the dictionary are the k-mers and the values are the number of occurrences of the k-mers in the reads. E.g.: {"ATGGATTA": 3, "GATGATAG": 26}. Your script should be tested with at least three k values: [20, 25, 30]. Make sure you index only once a k-mer and its reverse complement, for instance by choosing randomly one of them to include in the dictionary.
