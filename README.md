@@ -48,10 +48,10 @@ For each overlap check, do not forget to take into consideration the reverse com
 
  - Rare k-mers in Illumina sequencing could reflect a sequencing error. This is why, do not integrate a k-mer in your graph if its number of occurrences is below a threshold (you can test 2 and 20 as thresholds).
  - There is a possibility that a k-mer in your graph has more than one overlapping k-mer. In this case, you will have forks (more than one edge outgoing from the same vertex) in your graph as follows:
-
+```
     TATGGATT --> ATGGATTC
              --> ATGGATTG
-
+```
 In this case, append both branches and propose a strategy to construct different contigs with these branches or to select one of them to construct one contig. You can eliminate too short branches (tips).
 
 ### Output:
